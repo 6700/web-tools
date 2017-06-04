@@ -3,17 +3,23 @@
     Domains
     = link_to '', new_domain_path, class: "fa fa-plus pull-right"
 .panel-body
-  %table.table.table-bordered
-    %thead
-      %tr
-        %th Name
-        %th Created at
-        %th Actions
-    %tbody
-      - @domains.each do |domain|
+  - if @domains.any?
+    %table.table.table-bordered.table-striped
+      %thead
         %tr
-          %td= domain.name
-          %td= domain.created_at
-          %td
-            = link_to domain_path(domain), method: :delete do
-              %i.fa.fa-times
+          %th Name
+          %th Created at
+          %th Actions
+      %tbody
+        - @domains.each do |domain|
+          %tr
+            %td= domain.name
+            %td= domain.created_at
+            %td
+              = link_to domain_path(domain), method: :delete do
+                %i.fa.fa-times
+  - else
+    .row.text-center.grey
+      %i.fa.fa-frown-o.fa-5x
+    .row.grey
+      %h4.text-center You have no domains registered :(
