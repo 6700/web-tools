@@ -1,0 +1,5 @@
+.container.dashboard
+  = simple_form_for @configuration, url: configuration_path(@configuration), method: :patch do |f|
+    = f.input :first_name
+    = f.input :email
+    = f.submit class: "btn btn-primary"

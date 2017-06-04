@@ -1,4 +1,7 @@
 class DomainsController < ApplicationController
+  layout 'dashboard'
+
+
   rescue_from ActiveRecord::RecordInvalid, with: :new
   before_action :authenticate_user!
 

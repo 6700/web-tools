@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root 'domains#index'
+
+    resources :configurations, only: [:index, :update]
     resources :domains, only: [:index, :new, :create, :destroy]
   end
 

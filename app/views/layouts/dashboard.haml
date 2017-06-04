@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title Web tools!
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/navbar'
+    / %p.notice= notice
+    / %p.alert= alert
+    .container.dashboard
+      .row
+        .col-xs-12.col-sm-3
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title Tools
+            .list-group
+              %li.list-group-item= link_to "Domains", domains_path
+              %li.list-group-item= link_to "Email Forwarding", root_path
+              %li.list-group-item= link_to "Healt Checks", root_path
+              %li.list-group-item= link_to "DNS Checks", root_path
+        .col-xs-12.col-sm-9
+          .panel.panel-default
+            = yield
