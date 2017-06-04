@@ -1,5 +1,7 @@
 .container-flex
   .col-xs-12.viewport-height-100.center-both.hero.flex-column
     %h1 Web tools
-    %p Here's where the tools you need & you meet
-    = link_to "Sign in!", root_path, class: "btn btn-default"
+    %p HERE'S WHERE YOU MEET THE TOOLS YOU NEED
+    = link_to user_github_omniauth_authorize_path, class: "btn btn-default" do
+      %i.fa.fa-github
+      Start now

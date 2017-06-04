@@ -2,18 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: rails-template
-  password: rails-template
+  username: web_tools
+  password: web_tools
 
 development:
   <<: *default
-  database: rails-template_development
+  database: web_tools_development
   
 test:
   <<: *default
-  database: rails-template_test
+  database: web_tools_test
 
 production:
   <<: *default
-  database: rails-template_production
+  database: web_tools_production
   password: <%= ENV['RAILS-TEMPLATE_DATABASE_PASSWORD'] %>
