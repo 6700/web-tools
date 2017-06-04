@@ -1,0 +1,7 @@
+.panel-heading
+  %h3.panel-title
+    Add new Domain
+.panel-body
+  = simple_form_for @domain do |f|
+    = f.input :name
+    = f.submit class: "btn btn-primary"

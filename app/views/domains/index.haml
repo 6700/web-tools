@@ -1,0 +1,19 @@
+.panel-heading
+  %h3.panel-title
+    Domains
+    = link_to '', new_domain_path, class: "fa fa-plus pull-right"
+.panel-body
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th Name
+        %th Created at
+        %th Actions
+    %tbody
+      - @domains.each do |domain|
+        %tr
+          %td= domain.name
+          %td= domain.created_at
+          %td
+            = link_to domain_path(domain), method: :delete do
+              %i.fa.fa-times

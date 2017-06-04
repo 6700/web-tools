@@ -1,9 +1,10 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
+
+  has_many :domains
+
 
   def self.from_omniauth(auth)
     User.find_or_initialize_by(github_id: auth['id']).tap do |u|
