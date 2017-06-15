@@ -23,6 +23,11 @@ gem "font-awesome-rails"
 group :development, :test do
   gem 'pry-rails'
   gem 'rubocop', '0.47.1', require: false
+
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
