@@ -1,0 +1,2 @@
+class DnsChecksController < ApplicationController
+end

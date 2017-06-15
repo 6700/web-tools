@@ -17,9 +17,10 @@
               %h3.panel-title Tools
             .list-group
               %li.list-group-item= link_to "Domains", domains_path
-              %li.list-group-item= link_to "Email Forwarding", root_path
-              %li.list-group-item= link_to "Healt Checks", root_path
               %li.list-group-item= link_to "DNS Checks", root_path
+              -# %li.list-group-item= link_to "Email Forwarding", root_path
+              -# %li.list-group-item= link_to "HTTPS Checks", root_path
+              -# %li.list-group-item= link_to "Health Checks", root_path
         .col-xs-12.col-sm-9
           .panel.panel-default
             = yield

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
     resources :configurations, only: [:index, :update]
     resources :domains, only: [:index, :new, :create, :destroy]
+    resources :dns_checks, only: [:index]
   end
 
   root 'welcome#index'
